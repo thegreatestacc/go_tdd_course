@@ -1,2 +1,20 @@
+# JetBrains
 .idea/
 *.iml
+
+# VS Code
+.vscode/
+
+# Build artifacts
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Test binary
+*.test
+
+# Coverage
+coverage.out
+coverage.html
