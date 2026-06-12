@@ -18,3 +18,9 @@
 # Coverage
 coverage.out
 coverage.html
+
+# Local Go build cache
+.gocache/
+
+# Reference course repository
+course/
