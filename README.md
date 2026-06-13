@@ -9,8 +9,8 @@
 
 | Метрика | Результат |
 |---|---:|
-| Пройдено основной программы | **4 из 31 глав (12,9%)** |
-| Пройдено раздела Go fundamentals | **4 из 20 глав (20%)** |
+| Пройдено основной программы | **5 из 31 глав (16,1%)** |
+| Пройдено раздела Go fundamentals | **5 из 20 глав (25%)** |
 | Качество текущих решений | **98 / 100** |
 | Решено практических этапов | **7** |
 | Минимальная версия Go | **1.24** |
@@ -19,7 +19,7 @@
 Прогресс основной программы:
 
 ```text
-[####---------------------------] 12,9%
+[#####--------------------------] 16,1%
 ```
 
 ## Пройденные главы
@@ -30,7 +30,7 @@
 | 2 | Integers | Завершена | `Add` |
 | 3 | Iteration | Завершена | `Repeat`, benchmark |
 | 4 | Arrays and slices | Завершена | `Sum`, `SumAll`, `SumAllTails` |
-| 5 | Structs, methods & interfaces | Следующая | — |
+| 5 | Structs, methods & interfaces | Завершена | `Rectangle`, `Circle`, `Triangle`, методы площади, интерфейс `Shape`, периметр |
 
 Решения находятся в каталоге [`solutions`](solutions).
 
@@ -49,14 +49,14 @@
 
 ### Что нужно улучшить
 
-Известных дефектов в текущих решениях нет. После прохождения главы
-**Structs, methods & interfaces** существующие наборы однотипных подтестов можно
-переписать как table-driven tests.
+Известных дефектов в текущих решениях нет. Следующая глава основной программы —
+**Pointers & errors**.
 
 ### Сильные стороны
 
 - Все тесты проходят, а statement coverage каждого пакета составляет 100%.
-- Используются subtests, общие helpers, `t.Helper()`, benchmark и пакет `slices`.
+- Используются subtests, table-driven tests, общие helpers, `t.Helper()`, benchmark и пакет `slices`.
+- Интерфейс `Shape` позволяет единообразно проверять площадь разных фигур.
 - Функции корректно обрабатывают пустые входы и другие граничные случаи.
 - Production-код находится в обычных `.go` файлах, отдельно от тестов.
 - Код проходит `gofmt`, `go test`, `go build` и `go vet`.
@@ -79,7 +79,7 @@ go build ./solutions/...
 go vet ./solutions/...
 ```
 
-Все пять пакетов проходят проверки на Go 1.24.0 и имеют 100% statement
+Все шесть пакетов проходят проверки на Go 1.24.0 и имеют 100% statement
 coverage. Минимальная версия проекта — Go 1.24, поскольку benchmark использует
 добавленный в этой версии `b.Loop()`.
 
@@ -91,6 +91,7 @@ ok LearnGoWithTests/solutions/02_integers
 ok LearnGoWithTests/solutions/03_iteration
 ok LearnGoWithTests/solutions/04_arrays_and_slices/arrays
 ok LearnGoWithTests/solutions/04_arrays_and_slices/slices
+ok LearnGoWithTests/solutions/05_Structs_methods_interfaces/shapes
 ```
 
 ## Как считается прогресс
