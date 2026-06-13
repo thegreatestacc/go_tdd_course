@@ -1,4 +1,4 @@
-package __integers
+package integers
 
 import "testing"
 
@@ -7,11 +7,7 @@ func TestAdder(t *testing.T) {
 	expected := 4
 
 	if actual != expected {
-		t.Errorf("actual sum is %d, actual sum is %d",
+		t.Errorf("actual sum is %d, expected sum is %d",
 			actual, expected)
 	}
-}
-
-func Add(x, y int) int {
-	return x + y
 }

@@ -13,10 +13,3 @@ func TestSum(t *testing.T) {
 			actual, expected)
 	}
 }
-
-func Sum(nums []int) (sum int) {
-	for _, num := range nums {
-		sum += num
-	}
-	return sum
-}

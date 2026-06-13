@@ -1,21 +1,21 @@
 package main
 
-func main() {
-}
-
 const (
 	english            = "English"
 	englishHelloPrefix = "Hello "
 	spanish            = "Spanish"
-	spanishHelloPerf   = "Hola "
+	spanishHelloPrefix = "Hola "
 	french             = "French"
 	frenchHelloPrefix  = "Bonjour "
 )
 
+func main() {
+}
+
 func Hello(language, name string) string {
 	name = validateName(name)
 
-	prefix := gettingPrefix(language)
+	prefix := greetingPrefix(language)
 
 	return prefix + name
 }
@@ -27,14 +27,16 @@ func validateName(name string) string {
 	return name
 }
 
-func gettingPrefix(language string) (prefix string) {
+func greetingPrefix(language string) (prefix string) {
 	switch language {
 	case english:
 		prefix = englishHelloPrefix
 	case spanish:
-		prefix = spanishHelloPerf
+		prefix = spanishHelloPrefix
 	case french:
 		prefix = frenchHelloPrefix
+	default:
+		prefix = englishHelloPrefix
 	}
 	return prefix
 }
