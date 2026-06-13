@@ -86,11 +86,11 @@ coverage. Минимальная версия проекта — Go 1.24, пос
 Проверенный результат:
 
 ```text
-ok LearnGoWithTests/solutions/hello_world
-ok LearnGoWithTests/solutions/integers
-ok LearnGoWithTests/solutions/iteration
-ok LearnGoWithTests/solutions/arrays_and_slices/arrays
-ok LearnGoWithTests/solutions/arrays_and_slices/slices
+ok LearnGoWithTests/solutions/01_hello_world
+ok LearnGoWithTests/solutions/02_integers
+ok LearnGoWithTests/solutions/03_iteration
+ok LearnGoWithTests/solutions/04_arrays_and_slices/arrays
+ok LearnGoWithTests/solutions/04_arrays_and_slices/slices
 ```
 
 ## Как считается прогресс
